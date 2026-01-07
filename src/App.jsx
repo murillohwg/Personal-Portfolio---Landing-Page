@@ -17,7 +17,7 @@ function App() {
               href="https://wa.me/5511966029078" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-blue-600/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all"
+              className="relative z-50 bg-blue-600/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all"
             >
               Bora conversar?
             </a>
