@@ -1,0 +1,220 @@
+import React from 'react';
+import { motion } from "framer-motion";
+
+function App() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white selection:bg-blue-500/30">
+      {/* Barra de Navegação */}
+      <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+            Murillo Henrico Wagner Gonçalves
+          </span>
+          <div className="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+            <a href="#sobre" className="hover:text-white transition">Sobre</a>
+            <a href="#projetos" className="hover:text-white transition">Projetos</a>
+            <a 
+              href="https://wa.me/5511966029078" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-blue-600/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all"
+            >
+              Bora conversar?
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <main className="pt-32 pb-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full"
+          >
+            🚀 Disponível para Estágio / Junior
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8"
+          >
+            Desenvolvendo o futuro com <br />
+            <span className="text-blue-500">código </span> e segurança.
+          </motion.h1>
+
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed"
+          >
+            Estudante de Ciência da Computação focado em **SecDev**. 
+            Unindo desenvolvimento web moderno com auditoria de sistemas e redes.
+          </motion.p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a 
+              href="#projetos" 
+              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all text-center flex items-center justify-center"
+            >
+              Ver Meus Projetos
+            </a>
+            <a 
+              href="/curriculo.pdf" 
+              download="curriculo.pdf"
+              className="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all border border-slate-700 text-center flex items-center justify-center"
+            >
+              Baixar Currículo
+            </a>
+          </div>
+        </div>
+      </main>
+
+      {/* Seção de Competências */}
+      <motion.section 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="py-20 px-4 max-w-6xl mx-auto"
+        id="sobre"
+      >
+        <h2 className="text-center text-slate-400 text-sm tracking-widest uppercase mb-12">
+          Minhas Competências
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Card 1: Web */}
+          <div className="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-blue-500/30 transition-all group">
+            <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6 text-2xl group-hover:scale-110 transition">🎨</div>
+            <h3 className="text-xl font-bold mb-4 text-white">Desenvolvimento Web</h3>
+            <ul className="space-y-3 text-slate-400 text-sm">
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> React</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Tailwind CSS</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> JavaScript</li>
+            </ul>
+          </div>
+
+          {/* Card 2: Segurança */}
+          <div className="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-purple-500/30 transition-all group">
+            <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-6 text-2xl group-hover:scale-110 transition">🛠️</div>
+            <h3 className="text-xl font-bold mb-4 text-white">Cibersegurança</h3>
+            <ul className="space-y-3 text-slate-400 text-sm">
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div> Pentest</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div> Automação (Python/Bash)</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div> Kali Linux</li>
+            </ul>
+          </div>
+
+          {/* Card 3: Diferenciais */}
+          <div className="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-emerald-500/30 transition-all group">
+            <div className="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-6 text-2xl group-hover:scale-110 transition">🤝</div>
+            <h3 className="text-xl font-bold mb-4 text-white">Diferenciais</h3>
+            <ul className="space-y-3 text-slate-400 text-sm">
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div> Aprendizado Rápido</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div> Mentalidade Analítica</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div> Inglês Técnico</li>
+            </ul>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Seção de Projetos */}
+      <section id="projetos" className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-white mb-12 text-center"
+          >
+            Projetos em Destaque
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Projeto 1 */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-all shadow-2xl"
+            >
+              <div className="aspect-video bg-slate-800 flex flex-col items-center justify-center text-slate-700 group-hover:scale-105 transition-transform duration-500">
+                <span className="text-5xl mb-2">📡</span>
+                <div className="text-xs font-mono text-slate-500">wifi_scanner_v1.0</div>
+              </div>
+              <div className="p-8">
+                <div className="flex gap-2 mb-4">
+                  <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-medium">Network Scan</span>
+                  <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium">Security</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition">WiFi Scanner Tool</h3>
+                <p className="text-slate-400 mb-6 text-sm leading-relaxed">
+                  Script em Bash para automação de auditoria de rede. Identifica subnets, mapeia portas e realiza fingerprinting de SO com Nmap.
+                </p>
+                <a 
+                  href="https://github.com/murillohwg/scan-wifi" 
+                  target="_blank" rel="noopener noreferrer"
+                  className="block text-center text-white bg-blue-600 px-4 py-3 rounded-xl text-sm font-bold hover:bg-blue-500 transition-all"
+                >
+                  Ver no GitHub
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Projeto 2 */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition-all shadow-2xl"
+            >
+              <div className="aspect-video bg-slate-800 flex flex-col items-center justify-center text-slate-700 group-hover:scale-105 transition-transform duration-500">
+                <span className="text-5xl mb-2">📦</span>
+                <div className="text-xs font-mono text-slate-500">backup_manager.py</div>
+              </div>
+              <div className="p-8">
+                <div className="flex gap-2 mb-4">
+                  <span className="px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-500 text-xs font-medium">Python</span>
+                  <span className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-medium">Automation</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-400 transition">Python Backup Script</h3>
+                <p className="text-slate-400 mb-6 text-sm leading-relaxed">
+                  Automação em Python para gestão de backups com timestamps dinâmicos e compressão de diretórios.
+                </p>
+                <a 
+                  href="https://github.com/murillohwg/backup-script-python" 
+                  target="_blank" rel="noopener noreferrer"
+                  className="block text-center text-white bg-purple-600 px-4 py-3 rounded-xl text-sm font-bold hover:bg-purple-500 transition-all"
+                >
+                  Ver no GitHub
+                </a>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <a 
+              href="https://github.com/murillohwg?tab=repositories" 
+              target="_blank" rel="noopener noreferrer"
+              className="text-slate-400 hover:text-white transition-colors flex items-center gap-2 text-sm border-b border-transparent hover:border-white"
+            >
+              Ver todos no GitHub <span>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Simples */}
+      <footer className="py-10 border-t border-slate-900 text-center text-slate-500 text-sm">
+        <p>© 2024 Murillo Henrico. Construído com React e Tailwind.</p>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
