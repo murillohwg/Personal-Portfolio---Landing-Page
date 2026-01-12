@@ -13,14 +13,7 @@ function App() {
           <div className="hidden md:flex gap-8 text-sm font-medium text-slate-400">
             <a href="#sobre" className="hover:text-white transition">Sobre</a>
             <a href="#projetos" className="hover:text-white transition">Projetos</a>
-            <a 
-              href="https://wa.me/5511966029078" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative z-50 bg-blue-600/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all"
-            >
-              Bora conversar?
-            </a>
+
           </div>
         </div>
       </nav>
@@ -51,7 +44,7 @@ function App() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            Estudante de Ciência da Computação focado em **SecDev**. 
+            Estudante de Ciência da Computação. 
             Unindo desenvolvimento web moderno com auditoria de sistemas e redes.
           </motion.p>
 
@@ -136,10 +129,10 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Projeto 1 */}
             <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1 }} // Coloquei 0.1 aqui
               className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-all shadow-2xl"
             >
               <div className="aspect-video bg-slate-800 flex flex-col items-center justify-center text-slate-700 group-hover:scale-105 transition-transform duration-500">
@@ -153,7 +146,7 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition">WiFi Scanner Tool</h3>
                 <p className="text-slate-400 mb-6 text-sm leading-relaxed">
-                  Script em Bash para automação de auditoria de rede. Identifica subnets, mapeia portas e realiza fingerprinting de SO com Nmap.
+                  Suspeita que seu vizinho esteja usando seu WiFi? Esse script em Bash para automação de auditoria de rede identifica subnets, mapeia portas e realiza fingerprinting de SO com Nmap.
                 </p>
                 <a 
                   href="https://github.com/murillohwg/scan-wifi" 
@@ -167,10 +160,10 @@ function App() {
 
             {/* Projeto 2 */}
             <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }} // Coloquei 0.3 aqui para o segundo aparecer depois
               className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition-all shadow-2xl"
             >
               <div className="aspect-video bg-slate-800 flex flex-col items-center justify-center text-slate-700 group-hover:scale-105 transition-transform duration-500">
@@ -184,7 +177,7 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-400 transition">Python Backup Script</h3>
                 <p className="text-slate-400 mb-6 text-sm leading-relaxed">
-                  Automação em Python para gestão de backups com timestamps dinâmicos e compressão de diretórios.
+                  Cansado de fazer backup manual toda semana ou mês? Aqui está um projeto de automação em Python para gestão de backups com timestamps dinâmicos e compressão de diretórios.
                 </p>
                 <a 
                   href="https://github.com/murillohwg/backup-script-python" 
@@ -209,10 +202,63 @@ function App() {
         </div>
       </section>
 
-      {/* Footer Simples */}
-      <footer className="py-10 border-t border-slate-900 text-center text-slate-500 text-sm">
-        <p>© 2024 Murillo Henrico. Construído com React e Tailwind.</p>
+
+
+
+
+
+   {/* --- FOOTER SECTIONS --- */}
+      <footer className="bg-slate-900 border-t border-blue-500/20 pt-16 pb-8 px-4">
+        <div className="max-w-4xl mx-auto flex flex-col items-center">
+          
+          {/* Título Centralizado */}
+          <h2 className="text-white text-2xl font-bold text-center mb-8">
+            🚀 Conecte-se Comigo
+          </h2>
+          
+          {/* Grid de Botões Centralizado */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+            
+            {/* Atalho GitHub */}
+            <a href="https://github.com/murillohwg" target="_blank" rel="noopener noreferrer" 
+               className="flex flex-col items-center p-6 bg-slate-800 border border-blue-500/20 rounded-xl hover:border-blue-400 hover:bg-slate-700 transition-all group">
+              <span className="text-3xl mb-2 group-hover:scale-110 transition-transform">💻</span>
+              <span className="text-white font-semibold">GitHub</span>
+            </a>
+
+            {/* Atalho LinkedIn */}
+            <a href="https://www.linkedin.com/in/murillo-henrico-wagner-gon%C3%A7alves-21ba50378/" target="_blank" rel="noopener noreferrer"
+               className="flex flex-col items-center p-6 bg-slate-800 border border-blue-500/20 rounded-xl hover:border-blue-400 hover:bg-slate-700 transition-all group">
+              <span className="text-3xl mb-2 group-hover:scale-110 transition-transform">🤝</span>
+              <span className="text-white font-semibold">LinkedIn</span>
+            </a>
+
+            {/* Atalho Tinkercad */}
+            <a href="https://www.tinkercad.com/things/jcZStADIKW6-semaforo-projeto-sistemas-digitais" target="_blank" rel="noopener noreferrer"
+               className="flex flex-col items-center p-6 bg-slate-800 border border-blue-500/20 rounded-xl hover:border-blue-400 hover:bg-slate-700 transition-all group">
+              <span className="text-3xl mb-2 group-hover:scale-110 transition-transform">⚙️</span>
+              <span className="text-white font-semibold">Tinkercad</span>
+            </a>
+
+          </div>
+
+          {/* Copyright */}
+          <div className="mt-16 pt-8 border-t border-slate-800 w-full text-center text-slate-500 text-xs">
+            © 2026 Murillo Henrico - Portfolio. Todos os direitos reservados.
+          </div>
+        </div>
       </footer>
+
+{/* --- BOTÃO FLUTUANTE DO WHATSAPP (FIXO) --- */}
+<a 
+  href="https://wa.me/5511966029078" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 z-[9999] bg-green-500 text-white p-3 md:p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all transform hover:scale-110 flex items-center gap-2"
+>
+  <span className="hidden md:inline font-bold text-sm">Bora conversar?</span>
+  <span className="text-xl">💬</span>
+</a>
     </div>
   );
 }
