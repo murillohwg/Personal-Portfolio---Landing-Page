@@ -149,7 +149,7 @@ function App() {
                   Suspeita que seu vizinho esteja usando seu WiFi? Esse script em Bash para automação de auditoria de rede identifica subnets, mapeia portas e realiza fingerprinting de SO com Nmap.
                 </p>
                 <a 
-                  href="https://github.com/murillohwg/scan-wifi" 
+                  href="https://github.com/murillohwg/Network-Scanner" 
                   target="_blank" rel="noopener noreferrer"
                   className="block text-center text-white bg-blue-600 px-4 py-3 rounded-xl text-sm font-bold hover:bg-blue-500 transition-all"
                 >
@@ -180,7 +180,7 @@ function App() {
                   Cansado de fazer backup manual toda semana ou mês? Aqui está um projeto de automação em Python para gestão de backups com timestamps dinâmicos e compressão de diretórios.
                 </p>
                 <a 
-                  href="https://github.com/murillohwg/backup-script-python" 
+                  href="https://github.com/murillohwg/Auto-Backup-Tool" 
                   target="_blank" rel="noopener noreferrer"
                   className="block text-center text-white bg-purple-600 px-4 py-3 rounded-xl text-sm font-bold hover:bg-purple-500 transition-all"
                 >
